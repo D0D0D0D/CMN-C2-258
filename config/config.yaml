@@ -1,0 +1,25 @@
+# Runtime parameters - loaded by AgentRegistry and passed as Graph(config=...).
+
+max_retry: 3
+timeout_seconds: 30
+memory_enabled: false
+hitl:
+  enabled: false
+
+# Win/loss fetch (Data Contract 1.0.0, shared with Enterprise Sales Support Data Foundation Builder Agent)
+win_loss_table: "win_loss"
+column_map: {}
+max_records: 500
+recent_years: 3
+
+# Similarity / win-rate confidence
+amount_bands: [10000000, 50000000, 100000000]
+fallback_order: ["industry", "product_category", "amount_band"]
+min_sample: 3
+
+# Web research (lawful-collection manners)
+web_rate_limit_sec: 1.0
+web_timeout_sec: 10
+web_max_pages_per_competitor: 3
+fact_max_chars: 90
+quote_max_chars: 90
